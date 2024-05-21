@@ -108,7 +108,7 @@ while (true)
                 SendMail(m);
                 break;
             case SendingStrategy.Bundling:
-                BundleMails(m);
+                // BundleMails(m);
                 SendMail(m);
                 break;
             default:
@@ -121,14 +121,14 @@ while (true)
     Thread.Sleep(1000);
 }
 
-void BundleMails()
-{
-    foreach (var m in messages)
-    {
-        if(bundelMessages.)
-        bundelMessages.Add()
-    }
-}
+// void BundleMails()
+// {
+//     foreach (var m in messages)
+//     {
+//         if(bundelMessages.)
+//         bundelMessages.Add()
+//     }
+// }
 
 void SendMail(Message m)
 {
