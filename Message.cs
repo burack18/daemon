@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +24,7 @@ namespace DaemonTest
         public bool IsHtml { get; set; }
         public string BundlingKey { get; set; }
         public int DelayTime { get; set; }
-
+        public DateTime? TimestampSent { get; set; }
         public SendingStrategy SendingStrategy { get; set; }
         public Dictionary<string, string> Data { get; set; }
         public DateTime TimestampScheduled { get; set; }
@@ -32,6 +32,9 @@ namespace DaemonTest
     public enum SendingStrategy
     {
         Normal,
-        Bundling
+        Bundling,
+        DelayWithSendLastMail,
+        GroupMailing,
+        BundlingWithDelay
     }
 }
